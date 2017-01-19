@@ -2,7 +2,7 @@
 function containsNumber(argument) {
 	var arr = argument.split('');
 	for (a in argument) {
-		if(+argument[a]){
+		if(+argument[a] || +argument[a] === 0){
 			console.log('true');
 			return;
 		}
@@ -10,4 +10,4 @@ function containsNumber(argument) {
 	console.log("false");
 }
 
-containsNumber('abc123');
+containsNumber('abc0aa');
